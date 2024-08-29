@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 80,
+  "[html]": {
+    "prettier.printWidth": 100
+  },
+  "[typescriptreact]": {
+    "prettier.printWidth": 100
+  },
+  "npm-scripts.showStartNotification": false
+}
