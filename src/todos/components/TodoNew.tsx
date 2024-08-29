@@ -26,6 +26,12 @@ export const TodoNew = () => {
     return createTodo;
   };
 
+  const deleteCompleted = async () => {
+    const deleteTodo = await todosApi.deleteTodo();
+
+    router.refresh();
+  };
+
   return (
     <form className='flex w-full' onSubmit={onSubmit}>
       <input
@@ -47,9 +53,9 @@ export const TodoNew = () => {
       <span className='flex flex-1'></span>
 
       <button
-        //TODO: onClick={ () => deleteCompleted() }
         type='button'
         className='flex items-center justify-center rounded ml-2 bg-red-400 p-2 text-white hover:bg-red-700 transition-all'
+        onClick={() => deleteCompleted()}
       >
         <IoTrashOutline />
         Delete

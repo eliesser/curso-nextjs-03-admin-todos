@@ -27,3 +27,15 @@ export const createTodo = async (description: string): Promise<Todo> => {
 
   return todo;
 };
+
+interface ResponseDelete {
+  count: number;
+}
+
+export const deleteTodo = async (): Promise<ResponseDelete> => {
+  const todo = await fetch(`/api/todos`, {
+    method: 'DELETE',
+  }).then((resp) => resp.json());
+
+  return todo;
+};
