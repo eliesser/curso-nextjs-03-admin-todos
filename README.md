@@ -13,6 +13,18 @@ docker pull postgres:15.3
 docker compose up -d
 ```
 
+3. Reemplazar el .env.template a .env
+
+4. Reemplazar las variables de entorno
+
+# Prisma commands
+
+inicializar prisma
+
+```bash
+npx prisma init
+```
+
 ## Prod
 
 ## Stage
