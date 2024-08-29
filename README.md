@@ -17,13 +17,31 @@
 
 4. Reemplazar las variables de entorno
 
-5. Levantar el server
+5. Instalar las dependencias
+
+   ```
+   npm install
+   ```
+
+6. Migrar prisma
+
+   ```
+   npx prisma migrate dev
+   ```
+
+7. generar prisma
+
+   ```
+   npx prisma generate
+   ```
+
+8. Levantar el server
 
    ```
    npm run dev
    ```
 
-6. Ejecutar el SEED para [crear la base de datos](localhost:3000/api/seed)
+9. Ejecutar el SEED para [crear la base de datos](localhost:3000/api/seed)
 
 # Prisma commands
 
@@ -43,6 +61,12 @@ generar prisma
 
 ```
 npx prisma generate
+```
+
+Traer los models de la base de datos
+
+```
+npx prisma db pull
 ```
 
 ## Prod
