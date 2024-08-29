@@ -17,9 +17,7 @@ export const TabBar = ({ currentTab = 1, tabOptions = [1, 2, 3, 4] }: Props) => 
   };
 
   return (
-    <div
-      className={`grid w-full grid-cols-${tabOptions.length} space-x-2 rounded-xl bg-gray-200 p-2`}
-    >
+    <div className={`grid w-full space-x-2 rounded-xl bg-gray-200 p-2 grid-cols-4`}>
       {tabOptions.map((tab) => (
         <div key={tab}>
           <input
