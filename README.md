@@ -14,6 +14,21 @@ pnpm dev
 bun dev
 ```
 
+## Docker
+
+Descargar imagen de mongo y de postgres
+
+```bash
+docker pull mongo:6.0.6
+docker pull postgres:15.3
+```
+
+Levantar la base de datos:
+
+```bash
+docker compose up -d
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
