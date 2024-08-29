@@ -14,14 +14,12 @@ interface Props {
 export const TodoItem = ({ todo, toggleTodo }: Props) => {
   return (
     <div className={todo.done ? styles.todoDone : styles.todoPending}>
-      <div
-        className='flex flex-col sm:flex-row justify-start items-center gap-4 cursor-pointer'
-        onClick={() => toggleTodo(todo.id, !todo.done)}
-      >
+      <div className='flex flex-col sm:flex-row justify-start items-center gap-4'>
         <div
-          className={`flex items-center gap-2 p-2 rounded-md hover:bg-opacity-60 ${
+          className={`flex items-center gap-2 p-2 rounded-md hover:bg-opacity-60 cursor-pointer ${
             todo.done ? 'bg-blue-100' : 'bg-red-100'
           }`}
+          onClick={() => toggleTodo(todo.id, !todo.done)}
         >
           {todo.done ? <IoCheckboxOutline size={30} /> : <IoSquareOutline size={30} />}
         </div>
