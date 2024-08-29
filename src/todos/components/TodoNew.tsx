@@ -19,6 +19,8 @@ export const TodoNew = () => {
 
     const createTodo = await todosApi.createTodo(description);
 
+    setDescription('');
+
     router.refresh();
 
     return createTodo;
@@ -32,13 +34,14 @@ export const TodoNew = () => {
         placeholder='¿Qué necesita ser hecho?'
         onChange={(e) => setDescription(e.target.value)}
         defaultValue={description}
+        value={description}
       />
 
       <button
         type='submit'
         className='flex items-center justify-center rounded ml-2 bg-sky-500 p-2 text-white hover:bg-sky-700 transition-all'
       >
-        Crear
+        Create
       </button>
 
       <span className='flex flex-1'></span>
