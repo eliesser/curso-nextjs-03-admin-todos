@@ -39,7 +39,6 @@ export const TodoNew = () => {
         className='w-6/12 -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-sky-500 transition-all'
         placeholder='¿Qué necesita ser hecho?'
         onChange={(e) => setDescription(e.target.value)}
-        defaultValue={description}
         value={description}
       />
 
