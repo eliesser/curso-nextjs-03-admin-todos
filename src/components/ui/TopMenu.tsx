@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { CiBellOn, CiChat1, CiMenuBurger, CiSearch } from 'react-icons/ci';
 
 export const TopMenu = () => {

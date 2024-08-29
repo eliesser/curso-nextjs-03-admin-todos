@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const WidgetItem = () => {
   return (
     <div className='md:col-span-2 lg:col-span-1'>

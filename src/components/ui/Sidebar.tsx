@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import React from 'react';
-
 import { CiBookmarkCheck, CiLogout } from 'react-icons/ci';
 
 import { SidebarItem } from './SidebarItem';

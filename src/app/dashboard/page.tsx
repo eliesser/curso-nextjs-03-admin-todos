@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { WidgetItem } from '../../components';
+import { WidgetItem } from '@/components';
 
 export default function DashboardPage() {
   return (
