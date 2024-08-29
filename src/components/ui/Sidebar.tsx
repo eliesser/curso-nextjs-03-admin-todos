@@ -1,20 +1,26 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { CiBookmarkCheck, CiLogout } from 'react-icons/ci';
+import { CiLogout } from 'react-icons/ci';
 
 import { SidebarItem } from './SidebarItem';
+import { IoCalculatorOutline, IoCheckboxOutline, IoListOutline } from 'react-icons/io5';
 
 const sidebarItems = [
   {
     href: '/dashboard',
-    icon: <CiBookmarkCheck size={30} />,
+    icon: <IoCalculatorOutline size={30} />,
     label: 'Dashboard',
   },
   {
-    href: '/dashboard/categories',
-    icon: <CiBookmarkCheck size={30} />,
-    label: 'Categories',
+    href: '/dashboard/rest-todos',
+    icon: <IoCheckboxOutline size={30} />,
+    label: 'Rest TODOS',
+  },
+  {
+    href: '/dashboard/server-actions',
+    icon: <IoListOutline size={30} />,
+    label: 'Server Actions',
   },
 ];
 
