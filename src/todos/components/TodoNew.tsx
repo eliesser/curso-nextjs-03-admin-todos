@@ -25,7 +25,7 @@ export const TodoNew = () => {
   };
 
   const deleteCompleted = async () => {
-    const deleteTodo = await todosApi.deleteTodo();
+    await todosApi.deleteTodo();
 
     router.refresh();
   };
