@@ -25,6 +25,14 @@ inicializar prisma
 npx prisma init
 ```
 
+```bash
+npx prisma migrate dev
+```
+
+```bash
+npx prisma generate
+```
+
 ## Prod
 
 ## Stage
