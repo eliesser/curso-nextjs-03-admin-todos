@@ -43,6 +43,11 @@
 
 9. Ejecutar el SEED para [crear la base de datos](localhost:3000/api/seed)
 
+# Nota:
+
+usuario: test1@google.com
+password: 123456
+
 # Prisma commands
 
 inicializar prisma

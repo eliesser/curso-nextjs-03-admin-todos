@@ -15,10 +15,13 @@ datasource db {
 
 model Todo {
   id          String   @id @default(uuid())
+  userId      String   @map("user_id")
   description String
   done        Boolean  @default(false)
   createAt    DateTime @default(now())
   updateAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 // Auth.js
@@ -64,6 +67,7 @@ model User {
 
   accounts Account[]
   sessions Session[]
+  todos    Todo[]
 
   @@map("users")
 }
