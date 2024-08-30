@@ -22,7 +22,7 @@ export const Star = ({ stars }: Props) => {
         ))}
 
       <span className=' text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800 ml-3'>
-        {stars.toFixed(2)}
+        {stars?.toFixed(2)}
       </span>
     </>
   );
