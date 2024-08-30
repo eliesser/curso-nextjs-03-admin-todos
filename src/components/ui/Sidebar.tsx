@@ -10,6 +10,7 @@ import {
   IoCheckboxOutline,
   IoCodeWorkingOutline,
   IoListOutline,
+  IoPersonOutline,
 } from 'react-icons/io5';
 
 import { SidebarItem } from './SidebarItem';
@@ -40,6 +41,11 @@ const sidebarItems = [
     href: '/dashboard/products',
     icon: <IoBasketOutline size={30} />,
     label: 'Products',
+  },
+  {
+    href: '/dashboard/profile',
+    icon: <IoPersonOutline size={30} />,
+    label: 'Profile',
   },
 ];
 
