@@ -54,7 +54,8 @@ export const Sidebar = async () => {
 
   const userName = session?.user?.name ?? '';
   const userImage =
-    session?.user?.image ?? 'https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg';
+    session?.user?.image ??
+    'https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp';
 
   return (
     <aside className='ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]'>
