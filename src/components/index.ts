@@ -1,5 +1,7 @@
-export * from './ui/Sidebar';
-export * from './ui/SidebarItem';
+export * from './sidebar/Sidebar';
+export * from './sidebar/SidebarItem';
+export * from './sidebar/LogoutButton';
+
 export * from './ui/TopMenu';
 
 export * from './dashboard/WidgetItem';
