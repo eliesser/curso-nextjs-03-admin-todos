@@ -18,3 +18,12 @@ export const addProductToCart = (id: string) => {
 
   setCookie('cart', JSON.stringify(cookieCart));
 };
+
+export const removeProductToCart = (id: string) => {
+  const cookieCart = getCookieCart();
+
+  if (cookieCart[id]) delete cookieCart[id];
+  else return;
+
+  setCookie('cart', JSON.stringify(cookieCart));
+};
