@@ -4,6 +4,7 @@ import { boolean, object, string } from 'yup';
 
 import prisma from '../../../lib/prisma';
 import { Todo } from '@prisma/client';
+import { getUserSessionServer } from '@/auth/actions/auth-actions';
 
 interface Segments {
   params: {
@@ -12,11 +13,19 @@ interface Segments {
 }
 
 const getTodo = async (id: string): Promise<Todo | null> => {
-  return await prisma.todo.findUnique({
+  const user = await getUserSessionServer();
+
+  if (!user) return null;
+
+  const todo = await prisma.todo.findUnique({
     where: {
       id,
     },
   });
+
+  if (todo?.userId !== user.id) return null;
+
+  return todo;
 };
 
 export async function GET(request: Request, { params }: Segments) {
