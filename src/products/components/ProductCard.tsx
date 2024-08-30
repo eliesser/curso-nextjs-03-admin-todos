@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { IoAddCircleOutline, IoTrashOutline } from 'react-icons/io5';
+import { useRouter } from 'next/navigation';
 
 import { addProductToCart } from '@/shopping-cart/actions/actions';
 import { Star } from '../../components/ui/Star';
@@ -15,8 +16,11 @@ export interface Props {
 }
 
 export const ProductCard = ({ id, name, price, rating, image }: Props) => {
+  const router = useRouter();
+
   const onAddToCart = () => {
     addProductToCart(id);
+    router.refresh();
   };
 
   return (
