@@ -5,6 +5,7 @@ import { CiLogout } from 'react-icons/ci';
 
 import { SidebarItem } from './SidebarItem';
 import {
+  IoBasketOutline,
   IoCalculatorOutline,
   IoCheckboxOutline,
   IoCodeWorkingOutline,
@@ -31,6 +32,11 @@ const sidebarItems = [
     href: '/dashboard/cookies',
     icon: <IoCodeWorkingOutline size={30} />,
     label: 'Cookies',
+  },
+  {
+    href: '/dashboard/products',
+    icon: <IoBasketOutline size={30} />,
+    label: 'Products',
   },
 ];
 
